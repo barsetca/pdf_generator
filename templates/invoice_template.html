@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <style>
+        body { 
+            font-family: 'DejaVu Sans', 'Roboto', Arial, sans-serif; 
+            margin: 40px;
+            line-height: 1.6;
+        }
+        h2 { color: #333; }
+        h4 { color: #555; }
+        hr { border: 1px solid #ddd; margin: 20px 0; }
+        b { color: #2c3e50; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #808080;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        tr:nth-child(even) {
+            background-color: #e0e0e0;
+        }
+        tr:nth-child(odd) {
+            background-color: #f5f5f5;
+        }
+        .total-row {
+            font-weight: bold;
+            background-color: #b0b0b0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Чек #{{ invoice.id }} от {{ invoice.date }}</h2>
+    <p>Клиент: {{ invoice.customer_name }}</p>
+    <p>Сумма: <b>{{ invoice.total }} руб.</b></p>
+    <p>Статус: {{ invoice.status }}</p>
+    <hr>
+    <h4>Состав заказа</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Товар</th>
+                <th>Количество, шт</th>
+                <th>Цена, руб</th>
+                <th>Сумма, руб</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for o in orders %}
+            <tr>
+                <td>{{ o.product_name }}</td>
+                <td>{{ o.quantity }}</td>
+                <td>{{ o.price }}</td>
+                <td>{{ (o.quantity|int * o.price|int) }}</td>
+            </tr>
+            {% endfor %}
+            <tr class="total-row">
+                <td colspan="3" style="text-align: right;">Итого:</td>
+                <td>{{ invoice.total }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <p>Спасибо за покупку!</p>
+</body>
+</html>

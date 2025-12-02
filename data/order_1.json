@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "product_name": "Ноутбук",
+    "invoice_number": 1,
+    "quantity": 1,
+    "price": 45000
+  },
+  {
+    "id": 2,
+    "product_name": "Клавиатура",
+    "invoice_number": 1,
+    "quantity": 1,
+    "price": 2500
+  },
+  {
+    "id": 3,
+    "product_name": "Смартфон",
+    "invoice_number": 2,
+    "quantity": 1,
+    "price": 25000
+  },
+  {
+    "id": 4,
+    "product_name": "Ноутбук",
+    "invoice_number": 3,
+    "quantity": 1,
+    "price": 45000
+  },
+  {
+    "id": 5,
+    "product_name": "Наушники",
+    "invoice_number": 3,
+    "quantity": 2,
+    "price": 7000
+  },
+  {
+    "id": 6,
+    "product_name": "Мышь",
+    "invoice_number": 3,
+    "quantity": 1,
+    "price": 1500
+  },
+  {
+    "id": 7,
+    "product_name": "Наушники",
+    "invoice_number": 4,
+    "quantity": 1,
+    "price": 3500
+  },
+  {
+    "id": 8,
+    "product_name": "Клавиатура",
+    "invoice_number": 4,
+    "quantity": 1,
+    "price": 2500
+  },
+  {
+    "id": 9,
+    "product_name": "Мышь",
+    "invoice_number": 5,
+    "quantity": 2,
+    "price": 3000
+  },
+  {
+    "id": 10,
+    "product_name": "Клавиатура",
+    "invoice_number": 5,
+    "quantity": 1,
+    "price": 2500
+  }
+]
