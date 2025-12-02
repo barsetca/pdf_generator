@@ -36,8 +36,8 @@ venv.bak/
 .DS_Store
 
 # Generated files
-output/
-*.pdf
+#output/
+#*.pdf
 
 # Environment variables
 .env
